@@ -9,13 +9,14 @@
 
 <body>
   <button>Click Me!</button>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+  <script>
+    $("button").click(function () {
+      $.get("demo.php", function (data, status) {
+        alert("Data: " + data + "\nStatus: " + status);
+      });
+    }); 
+  </script>
 </body>
-<script>
-  $("button").click(function () {
-    $.get("demo.php", function (data, status) {
-      alert("Data: " + data + "\nStatus: " + status);
-    });
-  }); 
-</script>
 
 </html>
