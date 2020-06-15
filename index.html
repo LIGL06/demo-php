@@ -12,13 +12,9 @@
 </body>
 <script>
   $(document).ready(function(){
-    $.ajax({
-      method: 'GET',
-      url: './demo.php',
-      success: function(){
-        alert('ok');
-      }
-    })
+    $.get("demo.php", function(data, status){
+    alert("Data: " + data + "\nStatus: " + status);
+    });
   });
 </script>
 </html>
